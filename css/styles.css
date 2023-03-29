@@ -7,3 +7,17 @@
 main {
     height: 100vh;
 }
+
+main section article h1 {
+    font-size: 1.3rem;
+}
+
+main section article .btn {
+    border: 2px solid #0275d8;
+    transition: .3s;
+}
+
+main section article .btn:hover {
+    background-color: transparent;
+    color: #0275d8;
+}

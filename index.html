@@ -17,8 +17,18 @@
     <main class="d-flex justify-content-center align-items-center">
       <section>
         <article class="text-center">
-          <h1 class="fs-4">Adiviná el número mágico</h1>
-          <button class="btn btn-primary">Comenzar</button>
+          <h1>Adiviná el número mágico</h1>
+          <button class="btn btn-primary btn-init w-100 mt-2">Comenzar</button>
+          <input
+            type="number"
+            id="number-input"
+            class="form-control mt-3 d-none"
+            min="1"
+            max="100"
+          />
+          <button class="btn btn-primary d-none btn-submit mt-3 w-100">
+            Enviar
+          </button>
         </article>
       </section>
     </main>
@@ -27,5 +37,6 @@
       integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
       crossorigin="anonymous"
     ></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>
