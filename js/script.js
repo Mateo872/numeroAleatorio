@@ -2,13 +2,18 @@ const title = document.querySelector("h1");
 const btnInit = document.querySelector(".btn-init");
 const numberInput = document.querySelector("#number-input");
 const btnSubmit = document.querySelector(".btn-submit");
-const randomNumber = Math.floor(Math.random() * 100) + 1;
+let randomNumber = generateRandomNumber();
+
+function generateRandomNumber() {
+  return Math.floor(Math.random() * 100) + 1;
+}
 
 btnInit.addEventListener("click", () => {
   title.textContent = "Ingresá un número entre 1 y 100";
   btnInit.style.display = "none";
   numberInput.classList.remove("d-none");
   btnSubmit.classList.remove("d-none");
+  randomNumber = generateRandomNumber();
 });
 
 btnSubmit.addEventListener("click", () => {
@@ -25,6 +30,7 @@ btnSubmit.addEventListener("click", () => {
   } else {
     alert(`El número ${+randomNumber} es menor a ${+numberInput.value}.`);
   }
+  randomNumber = generateRandomNumber();
   numberInput.value = "";
   numberInput.focus();
 });
